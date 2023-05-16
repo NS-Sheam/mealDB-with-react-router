@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Outlet } from 'react-router-dom'
 import Header from './component/Header'
+import Footer from './component/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,7 +12,8 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      <Outlet></Outlet>
+      <Outlet className="[min-h-[calc(100vh - 110px)]"></Outlet>
+      <Footer></Footer>
     </div>
   )
 }
